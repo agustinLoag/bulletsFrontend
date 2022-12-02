@@ -1,0 +1,21 @@
+.container{
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgDiv {
+    width: 25px;
+    height: 25px;
+    background-image: url("../../assets/react.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin: auto;
+}
+
+.containerText{
+    margin-top: 1rem;
+}

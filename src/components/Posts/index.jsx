@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import usePost from "./hooks";
 import { Pagination } from "antd";
 import { Table, List, Divider, Typography } from "antd";
+import Spiner from "../Spiner";
 
 const Post = () => {
-  const { post, showPost, onChangePage } = usePost();
+  const { post, showPost, onChangePage, isLoading } = usePost();
   return (
     <>
+      {isLoading && <Spiner />}
       {post && (
         <>
           {showPost && (
             <>
               <Divider orientation="left">
-                <Typography.Title  level={3} style={{ margin: 0 }}>
+                <Typography.Title level={3} style={{ margin: 0 }}>
                   List Posts
                 </Typography.Title>
               </Divider>

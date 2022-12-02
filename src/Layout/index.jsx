@@ -1,9 +1,10 @@
 import { Layout } from "antd";
+import { Outlet } from "react-router-dom";
 import React from "react";
 import Navbar from "../components/Navbar";
 const { Header, Footer, Content } = Layout;
 
-const MainLayout = ({children}) => {
+const MainLayout = ({ children }) => {
   return (
     <>
       <Layout>
@@ -16,7 +17,7 @@ const MainLayout = ({children}) => {
         </Header>
         <Content style={{ padding: "0 50px" }}>
           <div className="site-layout-content">
-            {children}
+            <Outlet />
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>

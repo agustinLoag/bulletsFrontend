@@ -3,11 +3,7 @@ import Post from "../components/Posts";
 import MainLayout from "../Layout";
 
 const PostPage = () => {
-  return (
-    <MainLayout>
-      <Post />
-    </MainLayout>
-  );
+  return <Post />;
 };
 
 export default PostPage;

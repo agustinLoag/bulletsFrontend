@@ -1,0 +1,8 @@
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(238, 241, 241);
+    height: 300px;
+    align-items: center;
+}

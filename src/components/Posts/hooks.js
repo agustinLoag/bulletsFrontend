@@ -7,14 +7,19 @@ const usePost = () => {
   const [isError, setIsError] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentPageSize, setCurrentPageSize] = useState(10);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = async () => {
-    const { data, error } = await getPosts();
-    data ? setPost(data) : setIsError(error);
+    setIsLoading(true);
+    setTimeout(async () => {
+      const { data, error } = await getPosts();
+      data ? setPost(data) : setIsError(error);
+      setIsLoading(false);
+    }, 2000);
   };
 
   const onChangePage = (page, pageSize) => {
@@ -24,13 +29,13 @@ const usePost = () => {
   };
 
   const currentTableData = useMemo(() => {
-    console.log({currentPageSize, currentPage}, "post");
+    console.log({ currentPageSize, currentPage }, "post");
     if (post) {
       const firstPageIndex = (currentPage - 1) * currentPageSize;
       const lastPageIndex = firstPageIndex + currentPageSize;
       const res = post.slice(firstPageIndex, lastPageIndex);
-      console.log(res, "res")
-      setShowPost(res)
+      console.log(res, "res");
+      setShowPost(res);
     }
   }, [currentPage, currentPageSize, post]);
 
@@ -39,7 +44,8 @@ const usePost = () => {
     isError,
     onChangePage,
     currentTableData,
-    showPost
+    showPost,
+    isLoading
   };
 };
 
