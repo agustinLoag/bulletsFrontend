@@ -8,7 +8,7 @@ const Inicio = () => {
         <div>
           <div className={styles.imgDiv}></div>
           <div className={styles.containerText}>
-            Te damos la mas calida bienvenida
+            <strong>Te damos la más cálida bienvenida!!!</strong>
           </div>
         </div>
       </Col>

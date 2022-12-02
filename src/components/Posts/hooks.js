@@ -29,7 +29,6 @@ const usePost = () => {
   };
 
   const currentTableData = useMemo(() => {
-    console.log({ currentPageSize, currentPage }, "post");
     if (post) {
       const firstPageIndex = (currentPage - 1) * currentPageSize;
       const lastPageIndex = firstPageIndex + currentPageSize;

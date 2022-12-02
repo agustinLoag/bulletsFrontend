@@ -31,7 +31,7 @@ const Navbar = () => {
           h2. Ant Design
         </Title>
       </Col>
-      <Modal title="Deseas cerrar tu sesión?" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}/>
+      <Modal title="Desea salir del Proyecto CodeGus?" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}/>
 
     </Row>
   );

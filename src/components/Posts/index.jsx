@@ -30,10 +30,9 @@ const Post = () => {
                 bordered
                 dataSource={showPost}
                 renderItem={(item) => (
-                  // console.log(item, "item")
                   <List.Item>
                     <List.Item.Meta
-                      title={<>{item?.title || "Titulo"}</>}
+                      title={<>{`${item?.id} - ${item?.title}` || "Titulo"}</>}
                       description={item?.body || "Cuerpo del mensaje"}
                     />
                   </List.Item>
