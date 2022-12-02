@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import { MenuOutlined } from "@ant-design/icons";
+import Navbar from "./components/Navbar";
+import { Col, Row, Layout } from "antd";
+import { ConfigProvider, theme, Button } from "antd";
+const { Header, Footer, Content } = Layout;
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: "#122e3e",
+          colorBgBase: "#122e3e",
+          colorBgLayout: "#122e3e",
+          colorTextBase: "#c1c1c1e0",
+        },
+      }}
+    >
+      <Layout>
+        <Header
+          style={{
+            backgroundColor: "#122e3e",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Navbar />
+        </Header>
+        <Content style={{ padding: "0 50px" }}>
+          <div className="site-layout-content">Content</div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>
+          Ant Design ©2018 Created by Ant UED
+        </Footer>
+      </Layout>
+    </ConfigProvider>
   );
-}
+};
 
 export default App;
