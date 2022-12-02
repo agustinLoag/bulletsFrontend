@@ -15,13 +15,13 @@ const Navbar = () => {
     <Row>
       <Col xs={12} md={8} style={{ display: "flex", alignItems: "center" }}>
         <MenuContent>
-          <MenuItem key="inicio" icon={<HomeOutlined />} texto="Inicio" />
+          <MenuItem keyUnique="inicio" icon={<HomeOutlined />} texto="Inicio" />
           <MenuItem
-            key="ejemplo"
+            keyUnique="ejemplo"
             icon={<AreaChartOutlined />}
             texto="Ejemplo"
           />
-          <MenuItem key="salir" icon={<ImportOutlined />} texto="Salir" />
+          <MenuItem keyUnique="salir" icon={<ImportOutlined />} texto="Salir" />
         </MenuContent>
       </Col>
       <Col xs={12} md={8} style={{ display: "flex", alignItems: "center" }}>

@@ -13,7 +13,7 @@ const MenuContent = ({ children }) => {
       }}
       mode="horizontal"
     >
-      <Menu.SubMenu key="sub menu" icon={<MenuOutlined />}>
+      <Menu.SubMenu key="SubMenu" icon={<MenuOutlined />}>
         {children}
       </Menu.SubMenu>
     </Menu>
